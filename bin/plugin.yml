@@ -1,0 +1,24 @@
+name: zombiepack
+version: 1.0
+api-version: 1.16
+author: ReProgrammed
+main: Main
+commands:
+    start:
+       description: start
+    resetloots:
+       description: reset loots.
+    loadloots:
+       description: load loots.
+    loadmines:
+       description: yes load them.
+    loadknives:
+       description: yes load them.
+    summonzombie:
+       description: Summon a custom zombie.
+    credits:
+       description: View the credits.
+    cutscene:
+       description: test.
+    setrole:
+       description: Set your role.
