@@ -16,6 +16,7 @@ import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 
 import net.md_5.bungee.api.ChatColor;
+import roles.ElectricianRole;
 import roles.MedicRole;
 import roles.MercenaryRole;
 
@@ -39,6 +40,15 @@ public class Commands implements CommandExecutor {
 			}else if(arg3[0].equalsIgnoreCase("merc"))
 			{
 				MercenaryRole mr = new MercenaryRole();
+				if(arg0 instanceof Player)
+				{
+					mr.AddRole((Player)arg0);
+					mr.GameStart();
+					arg0.sendMessage(arg2);
+				}
+			}else if(arg3[0].equalsIgnoreCase("elec"))
+			{
+				ElectricianRole mr = new ElectricianRole();
 				if(arg0 instanceof Player)
 				{
 					mr.AddRole((Player)arg0);

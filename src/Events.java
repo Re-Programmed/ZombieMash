@@ -144,6 +144,12 @@ public class Events implements Listener{
 				{
 					if(event.getClickedBlock() != null)
 					{
+						if(event.getClickedBlock().getType() == Material.CRIMSON_PRESSURE_PLATE || event.getClickedBlock().getType() == Material.HEAVY_WEIGHTED_PRESSURE_PLATE)
+						{
+							event.getClickedBlock().setType(Material.AIR);
+							event.getClickedBlock().getWorld().playSound(event.getClickedBlock().getLocation(), Sound.ENTITY_TNT_PRIMED, 1f, 1f);
+						}
+						
 						if(event.getClickedBlock().getType() == Material.JUNGLE_BUTTON)
 						{
 							resetElecBox.add(event.getClickedBlock().getLocation());
@@ -777,7 +783,7 @@ public class Events implements Listener{
 	@EventHandler
 	public void onJoin(PlayerJoinEvent event)
 	{
-		event.getPlayer().setResourcePack("https://www.dropbox.com/s/l71wkdika1otbus/ZombiePackv2.zip?dl=1");
+		//event.getPlayer().setResourcePack("https://www.dropbox.com/s/l71wkdika1otbus/ZombiePackv2.zip?dl=1");
 		event.setJoinMessage(ChatColor.YELLOW + event.getPlayer().getName() + " is ready to face the challenge!");
 	}
 	
