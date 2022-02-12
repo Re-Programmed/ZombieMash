@@ -225,7 +225,8 @@ public class Main extends JavaPlugin {
 		    			meta.setGeneration(Generation.ORIGINAL);
 		    			meta.setTitle(ChatColor.GOLD + "Mission Brief");
 		    			
-		    			List<String> str = new ArrayList<String>();
+		    			@SuppressWarnings("unused")
+						List<String> str = new ArrayList<String>();
 		    			
 		    			for(String s : giveCommandBook.split("@"))
 		    			{
