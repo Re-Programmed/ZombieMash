@@ -28,6 +28,8 @@ public class ElectricianRole extends Roles {
 			
 			m.setDisplayName(ChatColor.GREEN + "Wire Cutters");
 			
+			i.setItemMeta(m);
+			
 			p.getInventory().addItem(i);
 		}
 	}
